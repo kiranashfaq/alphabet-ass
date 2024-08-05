@@ -1,9 +1,4 @@
-// var input = document.getElementById("display");
-// var button = document.getElementById("A");
 
-// button.addEventListener("click", function() {
-//   input.value += "A";
-// });
 var alphabets = [
   "Apple 🍎",
   "Ant 🐜",
@@ -78,67 +73,99 @@ var alphabets = [
   "Onion 🧅",
   "Penguin 🐧",
   "Piano",
+  "Queen 👑",
+  "Qatar 🇶🇦",
+  "Quail 🐓",
+  "Quality 💯",
+  "Quiet 🗣️",
+  "Rabbit 🐰",
+  "Rainbow 🌈",
+  "Rat 🐀",
+  "Robot 🤖",
 ];
+
+
+
+
+
+
+
+
  var input = document.getElementById("display");
- var button = document.getElementById("btn");
+
+ var button = document.querySelectorAll(".button");
 
 var specificLetterA = [];
-var specificLetterB = [];
 
 
+
+
+
+
+button.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    
+    // Clear the specificLetterA array
+    specificLetterA = [];
 for (let i = 0; i < alphabets.length; i++) {
-  if (alphabets[i][0] == button.innerHTML) {
+  if (alphabets[i][0] == btn.innerHTML) {
     specificLetterA.push(alphabets[i]);
+    console.log("hi");
+    input.value =""
   }
 }
-button.addEventListener("click", function () {
-var number = Math.floor(Math.random() * specificLetterA.length);
-// console.log(specificLetter[number]);
-var word =  specificLetterA[number];
-  input.value += word;
 
-  
-
-});
-
-
-var button2 = document.getElementById("btn2");
-
-var specificLetterB = [];
-
-for (let i = 0; i < alphabets.length; i++) {
-  if (alphabets[i][0] == button2.innerHTML) {
-    specificLetterB.push(alphabets[i]);
-  }
-}
-button2.addEventListener("click", function () {
-  var number = Math.floor(Math.random() * specificLetterB.length);
-  // console.log(specificLetter[number]);
-  var word = specificLetterB[number];
-  input.value += word;
-  
-
-
+    // Get a random index from the specificLetterA array
+    var number = Math.floor(Math.random() * specificLetterA.length);
+    // console.log(specificLetterA[number]);
+    var word = specificLetterA[number];
+    // console.log(word);
+    input.value += word;
+  });
 });
 
 
 
 
 
-var button3 = document.getElementById("btn3");
 
-var specificLetterC = [];
 
-for (let i = 0; i < alphabets.length; i++) {
-  if (alphabets[i][0] == button3.innerHTML) {
-    specificLetterC.push(alphabets[i]);
-  }
-}
-button3.addEventListener("click", function () {
-  var number = Math.floor(Math.random() * specificLetterC.length);
-  // console.log(specificLetter[number]);
-  var word = specificLetterC[number];
-  input.value += word;
 
-});
 
+
+
+
+
+
+
+
+
+
+
+
+"Apple 🍎", "Ant 🐜", "Airplane ✈️", "Alligator 🐊", "Astronaut 👩‍🚀"],
+    "Ball ⚽", "Banana 🍌", "Bear 🐻", "Boat 🚤", "Butterfly 🦋"],
+    "Cat 🐱", "Car 🚗", "Cake 🎂", "Cow 🐮", "Crayon 🖍️"],
+    "Dog 🐶", "Duck 🦆", "Doll 🪆", "Drum 🥁", "Dinosaur 🦕"],
+    "Elephant 🐘", "Egg 🥚", "Engine 🚂", "Envelope ✉️", "Eagle 🦅"],
+    "Fish 🐟", "Frog 🐸", "Flower 🌸", "Firetruck 🚒", "Fox 🦊"],
+    "Giraffe 🦒", "Grapes 🍇", "Goat 🐐", "Gift 🎁", "Guitar 🎸"],
+    "Horse 🐴", "Hat 🎩", "House 🏠", "Helicopter 🚁", "Heart ❤️"],
+   "Ice cream 🍦", "Igloo 🏠", "Insect 🐞", "Island 🏝️", "Iron 🔨"],
+    "Juice 🧃", "Jellyfish 🪼", "Jaguar 🐆", "Jeep 🚙", "Jacket 🧥"],
+    "Kite 🪁", "Kangaroo 🦘", "Key 🔑", "King 👑", "Kiwi 🥝"],
+   "Lion 🦁", "Lamp 🛋️", "Leaf 🍃", "Lemon 🍋", "Ladder 🪜"],
+    "Monkey 🐒", "Moon 🌕", "Milk 🥛", "Mouse 🐭", "Mango 🥭"],
+   "Nest 🪺", "Notebook 📒", "Nut 🌰", "Nail 🪛", "Nose 👃"],
+    "Orange 🍊", "Owl 🦉", "Octopus 🐙", "Ostrich 🪶", "Orca 🐋"],
+    "Panda 🐼", "Pencil ✏️", "Peach 🍑", "Parrot 🦜", "Pumpkin 🎃"],
+    "Queen 👸", "Quail 🦤", "Quarter 🪙", "Quilt 🛏️", "Quokka 🐹"],
+    "Rabbit 🐰", "Rainbow 🌈", "Robot 🤖", "Rose 🌹", "Rocket 🚀"],
+    "Sun ☀️", "Star 🌟", "Snake 🐍", "Strawberry 🍓", "Snowman ⛄"],
+   "Tiger 🐅", "Train 🚂", "Tree 🌳", "Truck 🚛", "Turtle 🐢"],
+   "Umbrella ☂️", "Unicorn 🦄", "Uniform 🧥", "UFO 🛸", "Urchin 🦔"],
+    "Van 🚐", "Violin 🎻", "Volcano 🌋", "Vase 🌺", "Vulture 🦅"],
+  "Whale 🐋", "Watch ⌚", "Watermelon 🍉", "Wolf 🐺", "Wagon 🛒"],
+    "Xylophone 🎼", "X-ray 💀", "Xmas tree 🎄", "Xerus 🐿️", "Xylitol 🍬"],
+    "Y": ["Yarn 🧶", "Yacht ⛵", "Yak 🐂", "Yam 🍠", "Yo-yo 🪀"],
+    "Z": ["Zebra 🦓", "Zip 🪢", "Zucchini 🥒", "Zoo 🦁", "Zipper 🔌"
